@@ -39,3 +39,9 @@ Modules
 Exception handling
 Lambda functions)
 9.Make a simple REPL.A REPL stands for Read, Evaluate, Print, Loop. It lets users type code line by line like the real Python shell.
+
+q3:was confused what is the difference between the cpp file and h file ?
+yes, .h (header) files and .cpp (C++) files are different and serve distinct purposes in C++ programming: 
+.h files (Header Files): These files typically contain declarations, class definitions, function prototypes, and other interface details. They describe the architecture of a program. A single header file is intended to be included by many different .cpp files.
+.cpp files (Source/Implementation Files): These files contain the actual implementation of the functions and methods declared in the corresponding header files. They define the functionality that the header files describe.
+During compilation, the preprocessor effectively copies the entire content of the .h file into every .cpp file that uses an #include directive for it.
