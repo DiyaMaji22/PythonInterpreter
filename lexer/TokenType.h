@@ -3,19 +3,60 @@
 
 
 enum class TokenType{
-    INTEGER,FLOAT,STRING,
-    BOOL_TRUE,BOOL_FALSE,NONE,
-    KEYWORD_PRINT,KEYWORD_IF,KEYWORD_ELSE,KEYWORD_WHILE,KEYWORD_DEF,KEYWORD_RETURN,
+    INTEGER,        // 42
+    FLOAT,          // 3.14
+    STRING,         // "hello"
+    BOOLEAN,        // True / False
+    NONE_VAL,       // None (reserved for future use)
+ 
+    //  Identifiers & Keywords 
+    IDENTIFIER,     // variable / function names
+ 
+    KW_IF,          // if
+    KW_ELSE,        // else
+    KW_ELIF,        // elif
+    KW_WHILE,       // while
+    KW_DEF,         // def
+    KW_RETURN,      // return
+    KW_PRINT,       // print  (treated as keyword in v1)
+    KW_TRUE,        // True
+    KW_FALSE,       // False
+    KW_NONE,        // None
+    KW_AND,         // and
+    KW_OR,          // or
+    KW_NOT,         // not
+ 
+    //  Arithmetic Operators 
+    PLUS,           // +
+    MINUS,          // -
+    STAR,           // *
+    SLASH,          // /
+    PERCENT,        // %
+    DOUBLE_STAR,    // **  (power)
+    DOUBLE_SLASH,   // //  (floor division)
+ 
+    //  Comparison Operators 
+    EQ_EQ,          // ==
+    BANG_EQ,        // !=
+    LESS,           // <
+    LESS_EQ,        // <=
+    GREATER,        // >
+    GREATER_EQ,     // >=
+ 
+    //  Assignment 
+    EQUAL,          // =
+ 
 
-    IDENTIFIER,
+    LPAREN,         // (
+    RPAREN,         // )
+    COLON,          // :
+    COMMA,          // ,
+ 
+    // Structure 
+    NEWLINE,        // \n  (Python is newline-sensitive)
+    INDENT,         // increased indentation
+    DEDENT,         // decreased indentation
+    END_OF_FILE     // EOF sentinel
+};
 
-    OPERATOR_PLUS,OPERATOR_MINUS,OPERATOR_MULTIPLY,OPERATOR_DIVIDE,
-    COMP_EQUALS,COMP_NOT_EQUALS,COMP_LESS,COMP_GREATER,COMP_LESS_EQUAL,COMP_GREATER_EQUAL,
-
-    ASSIGN,
-    PUNCTUATION_LEFT_PAREN, PUNCTUATION_RIGHT_PAREN,PUNCTUATION_COMMA,PUNCTUATOR_COLON,
-    PUNCTUATOR_SEMICOLON,
-
-    INDENT,DEDENT,NEWLINE,
-    END_OF_FILE,ERROR
-}
+#endif
